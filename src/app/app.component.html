@@ -14,7 +14,7 @@
           <h3>{{ item.title }}</h3>
           <p>{{ item.subtitle }}</p>
         </div>
-        <div class="bottom">${{ item.price }}</div>
+        <div class="bottom">{{ item.price / 100 | currency }}</div>
       </div>
     </div>
   </div>
