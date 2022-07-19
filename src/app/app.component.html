@@ -1,0 +1,21 @@
+<main>
+  <h1>Other Half Brewing</h1>
+  <select [(ngModel)]="type">
+    <option *ngFor="let type of types" [ngValue]="type.name">
+      {{ type.type }}
+    </option>
+  </select>
+  <div *ngFor="let item of data">
+    <div *ngIf="item.type === type" class="card">
+      <img src="{{ item.imageUrl }}" alt="" />
+
+      <div class="card__content">
+        <div class="top">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.subtitle }}</p>
+        </div>
+        <div class="bottom">${{ item.price }}</div>
+      </div>
+    </div>
+  </div>
+</main>
